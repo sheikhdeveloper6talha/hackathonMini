@@ -7,6 +7,7 @@
     --text-main: #1a1a1a;
     --text-muted: #6b7280;
     --radius: 35px;
+     --bg: #f5f2e8;
 }
 
 * { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Inter', sans-serif; }
@@ -118,7 +119,7 @@ height:28px;
 
 }
 /* Container & Hero Header */
-.container { max-width: 1100px; margin: 0 auto; padding: 0 20px; }
+.container { max-width: 1100px; margin: 0 auto; padding: 0 20px; overflow-x: hidden;}
 
 .hero-card {
     background: var(--charcoal);
@@ -152,7 +153,7 @@ h1 { font-size: 2.8rem; line-height: 1.1; margin-bottom: 15px; letter-spacing: -
 .ai-header { display: flex; align-items: center; gap: 10px; margin-bottom: 15px; }
 .card-text { font-size: 0.95rem; line-height: 1.5; color: #444; margin-bottom: 20px; }
 
-.pill-row { display: flex; gap: 10px; }
+.pill-row { display: flex; gap: 10px; align-items: center;}
 .pill { background: #e9ece6; padding: 6px 14px; border-radius: 15px; font-size: 0.75rem; color: #555; font-weight: 600; }
 
 /* Helpers & Lists */
@@ -186,4 +187,9 @@ h1 { font-size: 2.8rem; line-height: 1.1; margin-bottom: 15px; letter-spacing: -
 @media (max-width: 850px) {
     .detail-grid { grid-template-columns: 1fr; }
     h1 { font-size: 2.2rem; }
+.avatar {
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+}
 }
