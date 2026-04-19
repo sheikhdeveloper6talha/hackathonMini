@@ -201,10 +201,10 @@ h1 { font-size: 3.5rem; line-height: 1.1; margin-bottom: 25px; letter-spacing: -
 .sun-icon {
     width: 60px;
     height: 60px;
-    background: #e6b84d;
+    background: rgba(231, 186, 80, 0.5);
     border-radius: 50%;
     position: absolute;
-    top: 40px; right: 40px;
+    top: 55px; right: 100px;
 }
 
 .hero-side-card h2 { font-size: 2rem; margin: 20px 0; }
@@ -216,11 +216,19 @@ h1 { font-size: 3.5rem; line-height: 1.1; margin-bottom: 25px; letter-spacing: -
 .overline-teal { font-size: 0.7rem; font-weight: 800; color: var(--teal); }
 
 .flow-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
-.flow-card { background: var(--card-white); padding: 40px; border-radius: 30px; }
+.flow-card { background: var(--card-white); padding: 40px; border-radius: 30px; transition: all 0.s; }
+.flow-card:hover{
+    transform: translateY(-10px);
+}
 
 /* Requests Grid */
 .requests-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
-.req-card { background: var(--card-white); padding: 30px; border-radius: 30px; display: flex; flex-direction: column; }
+.req-card { background: var(--card-white); padding: 30px; border-radius: 30px; display: flex; flex-direction: column;
+transition: all 0.3;
+}
+.req-card:hover{
+    transform: translateY(-10px);
+}
 
 .tag { font-size: 0.7rem; padding: 4px 10px; border-radius: 12px; margin-right: 5px; font-weight: bold; }
 .tag-web { background: #e0ecea; color: var(--teal); }
@@ -238,6 +246,12 @@ h1 { font-size: 3.5rem; line-height: 1.1; margin-bottom: 25px; letter-spacing: -
     h1 { font-size: 2.5rem; }
 .hide{
     display: block;
+}
+.req-footer{
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 }
 
