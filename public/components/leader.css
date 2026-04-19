@@ -15,7 +15,8 @@
 
 }
 
-* { box-sizing: border-box; margin: 0; padding: 0; }
+* { box-sizing: border-box; margin: 0; padding: 0;
+overflow-x: hidden; }
 
 body {
     font-family: 'Inter', -apple-system, sans-serif;
@@ -126,7 +127,7 @@ height:28px;
 }
 
 /* Container & Header */
-.container { padding: 10px; max-width: 1100px; margin: 0 auto; }
+.container { padding: 10px; max-width: 1100px;  margin: 0 auto; margin-bottom: 100px;}
 
 .hero-header {
     background: var(--charcoal);
