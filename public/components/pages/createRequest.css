@@ -1,0 +1,189 @@
+:root {
+    --bg-aura: radial-gradient(circle at top left, #e0f0ed, #f5f3e9);
+    --charcoal: #1e2627;
+    --teal: #12a696;
+    --cream: #fcfbf6;
+    --white: #ffffff;
+    --text-main: #1a1a1a;
+    --text-muted: #6b7280;
+    --radius: 35px;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Inter', sans-serif; }
+
+body {
+    background: var(--bg-aura);
+    min-height: 100vh;
+    color: var(--text-main);
+    padding-bottom: 50px;
+}
+
+.navbar{
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:25px 6%;
+position:sticky;
+top:0;
+z-index:1200;
+background:radial-gradient(circle at top left,#e2f1ee,var(--bg));
+}
+
+.logo{
+display:flex;
+align-items:center;
+gap:10px;
+font-weight:700;
+}
+
+.logo-box{
+background:var(--teal);
+color:white;
+width:32px;
+height:32px;
+border-radius:8px;
+display:flex;
+align-items:center;
+justify-content:center;
+}
+
+.nav-links{
+display:flex;
+align-items:center;
+}
+
+.nav-links a{
+text-decoration:none;
+color:var(--text-muted);
+margin-left:25px;
+font-size:.9rem;
+}
+
+.active-pill{
+background:#e0ecea;
+color:var(--teal)!important;
+padding:8px 16px;
+border-radius:20px;
+font-weight:bold;
+}
+
+/* hidden on desktop */
+.menu-btn{
+display:none;
+background:none;
+border:none;
+font-size:28px;
+cursor:pointer;
+}
+
+/* Responsive */
+@media(max-width:768px){
+
+.menu-btn{
+display:block;
+}
+
+.nav-links{
+display:none;
+}
+
+.nav-links.active{
+display:flex;
+flex-direction:column;
+position:absolute;
+top:78px;
+left:0;
+width:100%;
+padding:25px;
+background:#ddd;
+box-shadow:0 4px 10px rgba(0,0,0,.08);
+}
+
+.nav-links.active a{
+margin:14px 0;
+}
+
+}
+
+@media(max-width:500px){
+
+.logo span{
+font-size:14px;
+}
+
+.logo-box{
+width:28px;
+height:28px;
+}
+
+}
+/* Container & Hero Header */
+.container { max-width: 1100px; margin: 0 auto; padding: 0 20px; }
+
+.hero-card {
+    background: var(--charcoal);
+    color: white;
+    padding: 50px;
+    border-radius: var(--radius);
+    margin-bottom: 30px;
+}
+
+.overline { font-size: 0.7rem; letter-spacing: 1.5px; font-weight: 700; opacity: 0.6; margin-bottom: 15px; }
+.tag-row { display: flex; gap: 8px; margin-bottom: 20px; }
+.tag-outline { font-size: 0.7rem; border: 1px solid rgba(255,255,255,0.2); padding: 4px 12px; border-radius: 12px; opacity: 0.8; }
+.tag-outline.green { color: #4ade80; border-color: #4ade80; opacity: 1; }
+
+h1 { font-size: 2.8rem; line-height: 1.1; margin-bottom: 15px; letter-spacing: -1px; }
+.subtitle { font-size: 1rem; opacity: 0.8; font-weight: 300; }
+
+/* Grid & Cards */
+.detail-grid { display: grid; grid-template-columns: 1.2fr 1fr; gap: 25px; }
+
+.card {
+    background: var(--cream);
+    padding: 35px;
+    border-radius: var(--radius);
+    margin-bottom: 25px;
+    box-shadow: 0 10px 40px rgba(0,0,0,0.02);
+}
+
+.overline-teal { color: var(--teal); font-size: 0.7rem; font-weight: 800; letter-spacing: 1.2px; margin-bottom: 15px; }
+
+.ai-header { display: flex; align-items: center; gap: 10px; margin-bottom: 15px; }
+.card-text { font-size: 0.95rem; line-height: 1.5; color: #444; margin-bottom: 20px; }
+
+.pill-row { display: flex; gap: 10px; }
+.pill { background: #e9ece6; padding: 6px 14px; border-radius: 15px; font-size: 0.75rem; color: #555; font-weight: 600; }
+
+/* Helpers & Lists */
+.helper-item {
+    background: white;
+    padding: 20px;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-top: 15px;
+}
+
+.avatar { width: 40px; height: 40px; border-radius: 50%; color: white; display: flex; align-items: center; justify-content: center; font-size: 0.8rem; font-weight: bold; }
+.avatar.orange { background: #e67e22; }
+.avatar.grey { background: #2d3436; }
+
+.helper-info { flex-grow: 1; }
+.helper-info strong { display: block; font-size: 0.9rem; }
+.helper-info span { font-size: 0.75rem; color: var(--text-muted); }
+
+.trust-badge { background: #e0ecea; color: var(--teal); font-size: 0.7rem; font-weight: 800; padding: 5px 10px; border-radius: 10px; }
+.trust-badge.faded { background: #f0f2f0; color: #888; }
+
+/* Buttons */
+.btn-group { display: flex; gap: 15px; }
+.btn-teal { background: var(--teal); color: white; border: none; padding: 14px 28px; border-radius: 25px; font-weight: bold; cursor: pointer; }
+.btn-white { background: white; color: var(--text-main); border: 1px solid #ddd; padding: 14px 28px; border-radius: 25px; font-weight: bold; cursor: pointer; }
+
+/* Responsive */
+@media (max-width: 850px) {
+    .detail-grid { grid-template-columns: 1fr; }
+    h1 { font-size: 2.2rem; }
+}

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HelpHub AI - Login</title>
+    <link rel="stylesheet" href="./coumunity.css">
+</head>
+<body>
+    <!-- start navbar  -->
+<nav>
+    <div class="navItemsone">
+        <span>H</span>
+        <p>HelpHub Ai</p>
+    </div>
+
+    <div class="navItemsTwo" id="navLinks">
+        <ul>
+            <li><a href="../../index.html">Home</a></li>
+            <li><a href="../explore.html">Explore</a></li>
+            <li><a href="../leaderShip.html">LeaderShip</a></li>
+            <li><a href="../AIcenter.html">Ai Center</a></li>
+        </ul>
+        
+
+    </div>
+
+    <button class="menu" onclick="toggleMenu()">☰</button>
+</nav>
+    <!-- end navbar -->
+
+
+    <div class="auth-wrapper">
+        <main class="auth-container">
+            
+            <section class="card dark-card">
+                <span class="overline">COMMUNITY ACCESS</span>
+                <h1>Enter the support network.</h1>
+                <p class="desc">Choose a demo identity, set your role, and jump into a multi-page product flow designed for asking, offering, and tracking help with a premium interface.</p>
+                
+                <ul class="feature-list">
+                    <li>Role-based entry for Need Help, Can Help, or Both</li>
+                    <li>Direct path into dashboard, requests, AI Center, and community feed</li>
+                    <li>Persistent demo session powered by LocalStorage</li>
+                </ul>
+            </section>
+
+            <section class="card light-card">
+                <span class="overline teal-text">LOGIN / SIGNUP</span>
+                <h2>Authenticate your community profile</h2>
+                
+                <form class="auth-form">
+                    <div class="input-group">
+                        <label>Select demo user</label>
+                        <select>
+                            <option>Ayesha Khan</option>
+                            <option>Hassan Ali</option>
+                        </select>
+                    </div>
+
+                    <div class="input-group">
+                        <label>Role selection</label>
+                        <select>
+                            <option>Both</option>
+                            <option>Helper</option>
+                            <option>Requester</option>
+                        </select>
+                    </div>
+
+                    <div class="input-row">
+                        <div class="input-group">
+                            <label>Email</label>
+                            <input type="email" value="community@helphub.ai">
+                        </div>
+                        <div class="input-group">
+                            <label>Password</label>
+                            <input type="password" value="password123">
+                        </div>
+                    </div>
+
+                    <button type="submit" class="submit-btn">Continue to dashboard</button>
+                </form>
+            </section>
+
+        </main>
+    </div>
+
+</body>
+<script src="./coumunity.js"></script>
+</html>

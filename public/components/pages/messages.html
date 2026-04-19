@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HelpHub AI - Dashboard</title>
+    <link rel="stylesheet" href="./message.css">
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="logo">
+            <div class="logo-box">H</div>
+            <span>HelpHub AI</span>
+        </div>
+        <div class="nav-links">
+            <a href="../../index.html">Dashboard</a>
+            <a href="../explore.html">Explore</a>
+            <a href="#" class="active-pill">Messages</a>
+        </div>
+    </nav>
+
+    <div class="container">
+        <header class="hero-card">
+            <p class="overline">INTERACTION / MESSAGING</p>
+            <h1>Keep support moving through direct communication.</h1>
+            <p class="subtitle">Basic messaging gives helpers and requesters a clear follow-up path once a match happens.</p>
+        </header>
+
+        <div class="main-grid">
+            
+            <section class="content-card">
+                <p class="overline-teal">CONVERSATION STREAM</p>
+                <h2>Recent messages</h2>
+                
+                <div class="msg-bubble">
+                    <div class="msg-header">
+                        <strong>Ayesha Khan → Sara Noor</strong>
+                        <span class="time">09:45 AM</span>
+                    </div>
+                    <p>I checked your portfolio request. Share the breakpoint screenshots and I can suggest fixes.</p>
+                </div>
+
+                <div class="msg-bubble">
+                    <div class="msg-header">
+                        <strong>Hassan Ali → Ayesha Khan</strong>
+                        <span class="time">11:10 AM</span>
+                    </div>
+                    <p>Your event poster concept is solid. I would tighten the CTA and reduce the background texture.</p>
+                </div>
+            </section>
+
+            <section class="content-card">
+                <p class="overline-teal">SEND MESSAGE</p>
+                <h2>Start a conversation</h2>
+                
+                <form class="auth-form">
+                    <div class="input-group">
+                        <label>To</label>
+                        <select>
+                            <option>Ayesha Khan</option>
+                        </select>
+                    </div>
+                    <div class="input-group">
+                        <label>Message</label>
+                        <textarea placeholder="Share support details, ask for files, or suggest next steps."></textarea>
+                    </div>
+                    <button type="submit" class="btn-primary">Send</button>
+                </form>
+            </section>
+
+        </div>
+    </div>
+</body>
+</html>
