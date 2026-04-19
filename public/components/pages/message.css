@@ -7,6 +7,7 @@
     --text-main: #1a1a1a;
     --text-muted: #6b7280;
     --radius: 35px;
+      --bg: #f5f2e8;
 }
 
 * {
@@ -24,28 +25,103 @@ body {
 }
 
 /* Navbar */
-.navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 25px 6%;
+.navbar{
+ display:flex;
+ justify-content:space-between;
+ align-items:center;
+ padding:25px 6%;
+ position:sticky;
+ top:0;
+ z-index:1200;
+ background:radial-gradient(circle at top left,#e2f1ee,var(--bg));
+ width:100%;
 }
 
-.logo { display: flex; align-items: center; gap: 10px; font-weight: 700; }
-.logo-box {
-    background: var(--teal); color: white;
-    width: 32px; height: 32px; border-radius: 8px;
-    display: flex; align-items: center; justify-content: center;
+.logo{
+ display:flex;
+ align-items:center;
+ gap:10px;
+ font-weight:700;
 }
 
-.nav-links a { text-decoration: none; color: var(--text-muted); margin-left: 25px; font-size: 0.9rem; font-weight: 500; }
-.active-pill {
-    background: #e0ecea; color: var(--teal) !important;
-    padding: 8px 16px; border-radius: 20px; font-weight: bold;
+.logo-box{
+ background:var(--teal);
+ color:white;
+ width:32px;
+ height:32px;
+ border-radius:8px;
+ display:flex;
+ align-items:center;
+ justify-content:center;
 }
 
+.nav-links{
+ display:flex;
+ align-items:center;
+}
+
+.nav-links a{
+ text-decoration:none;
+ color:var(--text-muted);
+ margin-left:25px;
+ font-size:.9rem;
+ font-weight:500;
+}
+
+.active-pill{
+ background:#e0ecea;
+ color:var(--teal)!important;
+ padding:8px 16px;
+ border-radius:20px;
+ font-weight:bold;
+}
+
+/* Toggle Button */
+.menu-btn{
+ display:none;
+ border:none;
+ background:none;
+ font-size:30px;
+ color:var(--teal);
+ cursor:pointer;
+}
+
+/* Mobile */
+@media(max-width:768px){
+
+.menu-btn{
+ display:block;
+}
+
+.nav-links{
+ position:absolute;
+ top:90px;
+ left:0;
+ width:100%;
+ background:radial-gradient(circle at top left,#e2f1ee,var(--bg));
+ flex-direction:column;
+ gap:20px;
+ padding:25px 0;
+
+ opacity:0;
+ visibility:hidden;
+ transform:translateY(-20px);
+ /* transition:.4s; */
+}
+
+.nav-links a{
+ margin-left:0;
+}
+
+.nav-links.show{
+ opacity:1;
+ visibility:visible;
+ transform:translateY(0);
+}
+
+}
 /* Layout */
-.container { max-width: 1100px; margin: 0 auto; padding: 0 20px; }
+.container { max-width: 1100px; margin: 30px auto; padding: 0 20px; overflow-x: hidden; }
 
 /* Charcoal Hero Card */
 .hero-card {
@@ -123,4 +199,8 @@ textarea { height: 120px; resize: none; }
     .main-grid { grid-template-columns: 1fr; }
     h1 { font-size: 2.1rem; }
     .hero-card { padding: 35px; }
+.msg-header {
+padding: 10px;
+}
+
 }
