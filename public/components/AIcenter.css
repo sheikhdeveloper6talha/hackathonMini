@@ -111,12 +111,13 @@ justify-content:space-between;
 .navItemsTwo.active{
 display:block;
 position:absolute;
-top:70px;
+top:60px;
 left:0;
 width:100%;
-background: #333;
+background: rgb(243, 243, 243);
 padding:20px;
 z-index: 100;
+
 }
 
 .navItemsTwo.active ul{
@@ -125,7 +126,7 @@ gap: 30px;
 padding: 10px;
 }
 .navItemsTwo.active ul li a {
-    color: #fff;
+color: #333;
 
 }
 .navItemsTwo.active .navItemsthree{
@@ -140,6 +141,7 @@ gap: 10px;
 .container {
      max-width: 1000px;
      margin: 80px auto;
+     padding: 10px;
      }
 
 /* Hero Section */
@@ -183,8 +185,11 @@ gap: 10px;
     padding: 30px;
     border-radius: 20px;
     box-shadow: 0 4px 15px rgba(0,0,0,0.02);
+transition: all 0.5s;
 }
-
+.stat-card:hover{
+    transform: translateY(-5px);
+}
 .card-label { font-size: 0.65rem; font-weight: 800; letter-spacing: 1px; color: #147a75; margin-bottom: 15px; display: block; }
 .stat-card h3 { font-size: 1.6rem; margin-bottom: 10px; }
 .big-num { font-size: 2.5rem; font-weight: bold; margin-bottom: 10px; }
